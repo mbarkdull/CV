@@ -172,7 +172,7 @@ catList()
 ```
 \normalsize
 
-# Research 
+# Research Experiences
 ```{r}
 detailed_entries(Research, 
                  when = glue("{Start}--{End}"),
