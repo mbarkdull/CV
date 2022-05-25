@@ -109,7 +109,7 @@ catList()
 Dagger (†) indicates presenter. 
 \normalsize
 
-**Oral Presentations:**
+**Oral presentations:**
 \scriptsize
 ```{r}
 Talks %>%
@@ -132,6 +132,16 @@ catList()
 ```{r}
 Talks %>%
 filter(Type == "Poster") %>%
+pull("Details") %>%
+catList()
+
+```
+\normalsize
+**Invited public presentations:**
+\scriptsize
+```{r}
+Talks %>%
+filter(Type == "Public") %>%
 pull("Details") %>%
 catList()
 
