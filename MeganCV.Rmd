@@ -149,7 +149,7 @@ catList()
 \normalsize
 # Grants, Fellowships & Awards
 
-**Grants     (Total amount: $3,750)**
+**Grants     (Total amount: $7,750)**
 \scriptsize
 ```{r}
 Awards %>%
