@@ -104,6 +104,17 @@ catList()
 #catList()
 ```
 \normalsize
+
+**Scientific outreach:**
+\scriptsize
+```{r}
+Publications %>%
+filter(Type == "Scientific outreach") %>%
+pull("Details") %>%
+catList()
+```
+\normalsize
+
 # Talks
 \footnotesize 
 Dagger (†) indicates presenter. 
