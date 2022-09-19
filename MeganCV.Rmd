@@ -97,12 +97,13 @@ catList()
 ```
 \normalsize
 
+**In review:**
 \scriptsize
 ```{r}
-#Publications %>%
-#filter(Type != "Published") %>%
-#pull("Details") %>%
-#catList()
+Publications %>%
+filter(Type == "inReview") %>%
+pull("Details") %>%
+catList()
 ```
 \normalsize
 
