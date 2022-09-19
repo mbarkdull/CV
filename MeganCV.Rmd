@@ -68,6 +68,7 @@ Curation <- dplyr::filter(CVData, Category == "Curation")
 Teaching <- dplyr::filter(CVData, Category == "Teaching")
 Awards <- dplyr::filter(CVData, Category == "Awards")
 Service <- dplyr::filter(CVData, Category == "Service")
+Reviewer <- dplyr::filter(CVData, Category == "Reviewer")
 Outreach <- dplyr::filter(CVData, Category == "Outreach")
 Publications <- dplyr::filter(CVData, Category == "Publications")
 Talks <- dplyr::filter(CVData, Category == "Talks")
@@ -232,6 +233,16 @@ detailed_entries(Service,
                  with = Position,
                  why = Details)
 ```
+**Journal referee:**
+\scriptsize
+```{r}
+Reviewer %>%
+filter(Type == "reviewer") %>%
+pull("Details") %>%
+catList()
+
+```
+\normalsize
 
 # Outreach 
 ```{r}
