@@ -162,7 +162,7 @@ catList()
 \normalsize
 # Grants, Fellowships & Awards
 
-**Grants     (Total amount: $7,750)**
+**Grants     (Total amount: $9,750)**
 \scriptsize
 ```{r}
 Awards %>%
@@ -235,16 +235,6 @@ detailed_entries(Service,
                  why = Details)
 ```
 
-```{r}
-colorize <- function(x, color) {
-  if (knitr::is_latex_output()) {
-    sprintf("\\textcolor{%s}{%s}", color, x)
-  } else if (knitr::is_html_output()) {
-    sprintf("<span style='color: %s;'>%s</span>", color,
-      x)
-  } else x
-}
-```
 **Journal referee:**
 \scriptsize
 ```{r}
