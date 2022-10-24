@@ -150,16 +150,7 @@ catList()
 
 ```
 \normalsize
-**Invited public presentations:**
-\scriptsize
-```{r}
-Talks %>%
-filter(Type == "Public") %>%
-pull("Details") %>%
-catList()
 
-```
-\normalsize
 # Grants, Fellowships & Awards
 
 **Grants     (Total amount: $9,750)**
