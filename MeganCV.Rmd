@@ -153,7 +153,7 @@ catList()
 
 # Grants, Fellowships & Awards
 
-**Grants     (Total amount: $9,750)**
+**Grants     (Total amount: $10,750)**
 \scriptsize
 ```{r}
 Awards %>%
@@ -186,7 +186,7 @@ catList()
 ```
 \normalsize
 
-# Research Experiences
+# Research Positions
 ```{r}
 detailed_entries(Research, 
                  when = glue("{Start}--{End}"),
