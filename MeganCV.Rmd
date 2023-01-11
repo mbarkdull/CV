@@ -8,7 +8,7 @@ www: mbarkdull.github.io
 email: "mb2337@cornell.edu "
 twitter: meganbarkdull_
 github: mbarkdull
-headcolor: 754f8f
+headcolor: 70415c
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::awesomecv
 always_allow_html: yes
@@ -69,6 +69,7 @@ Teaching <- dplyr::filter(CVData, Category == "Teaching")
 Awards <- dplyr::filter(CVData, Category == "Awards")
 Service <- dplyr::filter(CVData, Category == "Service")
 Reviewer <- dplyr::filter(CVData, Category == "Reviewer")
+Societies <- dplyr::filter(CVData, Category == "society")
 Outreach <- dplyr::filter(CVData, Category == "Outreach")
 Publications <- dplyr::filter(CVData, Category == "Publications")
 Talks <- dplyr::filter(CVData, Category == "Talks")
@@ -231,6 +232,17 @@ detailed_entries(Service,
 ```{r}
 Reviewer %>%
 filter(Type == "reviewer") %>%
+pull("Details") %>%
+catList()
+
+```
+\normalsize
+
+**Society membership:**
+\scriptsize
+```{r}
+Societies %>%
+filter(Type == "society") %>%
 pull("Details") %>%
 catList()
 
