@@ -108,16 +108,6 @@ catList()
 ```
 \normalsize
 
-**In review:**
-\scriptsize
-```{r}
-Publications %>%
-filter(Type == "inReview") %>%
-pull("Details") %>%
-catList()
-```
-\normalsize
-
 **Scientific outreach:**
 \scriptsize
 ```{r}
