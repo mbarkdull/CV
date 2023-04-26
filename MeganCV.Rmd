@@ -187,7 +187,7 @@ printNumberedList()
 
 # Grants, Fellowships & Awards
 
-**Grants     (Total amount: $12,750)**
+**Grants     (Total amount: $13,750)**
 \scriptsize
 ```{r}
 Awards %>%
