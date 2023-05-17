@@ -95,6 +95,7 @@ Research <- dplyr::filter(CVData, Category == "Research Experience")
 Curation <- dplyr::filter(CVData, Category == "Curation")
 Teaching <- dplyr::filter(CVData, Category == "Teaching")
 Awards <- dplyr::filter(CVData, Category == "Awards")
+Mentoring <- dplyr::filter(CVData, Category == "Mentoring")
 Service <- dplyr::filter(CVData, Category == "Service")
 Reviewer <- dplyr::filter(CVData, Category == "Reviewer")
 Societies <- dplyr::filter(CVData, Category == "society")
@@ -249,6 +250,19 @@ detailed_entries(Teaching,
                  with = Position,
                  why = Details)
 ```
+
+# Mentoring Experiences
+
+```{r}
+detailed_entries(Mentoring, 
+                 when = glue("{Start}--{End}"),
+                 what = Supervisor,
+                 where = Institution,
+                 with = Position,
+                 why = Details)
+
+```
+
 
 # Service 
 ```{r}
