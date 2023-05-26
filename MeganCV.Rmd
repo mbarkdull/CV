@@ -59,14 +59,20 @@ catList <- function(x, out.format = knitr::opts_knit$get("out.format"),
 }
 
 # Define a function to print nice numbered lists for talks and papers:
-printNumberedList <- function(x, out.format = knitr::opts_knit$get("out.format"),
-                      environment = "itemize",
-                      marker = NULL) {
+printNumberedList <- function(x, 
+                              out.format = knitr::opts_knit$get("out.format"),
+                              environment = "itemize",
+                              marker = NULL) {
   if (out.format == "markdown") {
     if (!missing(environment) || !missing(marker)) {
       warning("Ignoring arguments that are not supported for markdown output.")
     }
-    out <- sprintf("\n\n%s\n \n", paste(paste(seq_along(x), ". ", x, sep = ""), collapse = "\n"))
+    out <- sprintf("\n\n%s\n \n", 
+                   paste(paste((seq_along(x)),
+                               ". ",
+                               x,
+                               sep = ""),
+                         collapse = "\n"))
   } else {
     if (out.format == "latex") {
       itemCommand <- if (missing(marker)) {
