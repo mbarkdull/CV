@@ -67,29 +67,40 @@ printNumberedList <- function(x,
     if (!missing(environment) || !missing(marker)) {
       warning("Ignoring arguments that are not supported for markdown output.")
     }
+    listItem <- as.character(paste(rev(seq_along(x)),
+                                   ". ",
+                                   x,
+                                   sep = ""))
     out <- sprintf("\n\n%s\n \n", 
-                   paste(paste((seq_along(x)),
+                   paste(listItem,
+                         "\n",
+                         sep = ""),
+                         collapse = "\n")
+    out2 <- sprintf("\n\n%s\n \n", 
+                   paste(paste(rev(seq_along(x)),
                                ". ",
                                x,
                                sep = ""),
                          collapse = "\n"))
   } else {
-    if (out.format == "latex") {
-      itemCommand <- if (missing(marker)) {
-        "\\item"
-      } else {
-          sprintf("\\item[%s]", marker)
-      }
-      listEnv <- c(
-        sprintf("\\begin{%s}\n", environment),
-        sprintf("\n\\end{%s}\n", environment))
-      out <- paste(itemCommand, x, collapse = "\n")
-      out <- sprintf("%s%s%s", listEnv[1], out, listEnv[2])
-    } else {
-      stop("Output format not supported.")
-    }
+    print("latex")
+   # if (out.format == "latex") {
+     # itemCommand <- if (missing(marker)) {
+      #  "\\item"
+      #} else {
+      #    sprintf("\\item[%s]", marker)
+     # }
+     # listEnv <- c(
+      #  sprintf("\\begin{%s}\n", environment),
+      #  sprintf("\n\\end{%s}\n", environment))
+     #out <- paste(itemCommand, x, collapse = "\n")
+     # out <- sprintf("%s%s%s", listEnv[1], out, listEnv[2])
+   # } else {
+   #   stop("Output format not supported.")
+   # }
   }
-    return(knitr::asis_output(out))
+    return(knitr::asis_output(out,
+                              cacheable = FALSE))
 }
 
 # Read in data:
@@ -128,33 +139,33 @@ Double dagger (‡) indicates co-first authors.
 
 **Published:**
 \scriptsize
-```{r results='asis'}
+```{r results='asis', cache=FALSE}
 
-Publications %>%
+published <- Publications %>%
   filter(Type == "Published") %>%
-  pull("Details") %>%
-  printNumberedList()
+  pull("Details") 
+printNumberedList(published)
 
 ```
 \normalsize
 
 **In press:**
 \scriptsize
-```{r results='asis'}
-Publications %>%
-filter(Type == "inPress") %>%
-pull("Details") %>%
-printNumberedList()
+```{r results='asis', cache=FALSE}
+inPress <- Publications %>%
+  filter(Type == "inPress") %>%
+  pull("Details") 
+printNumberedList(inPress)
 ```
 \normalsize
 
 **Scientific outreach:**
 \scriptsize
-```{r results='asis'}
-Publications %>%
-filter(Type == "Scientific outreach") %>%
-pull("Details") %>%
-printNumberedList()
+```{r results='asis', cache=FALSE}
+outreach <- Publications %>%
+  filter(Type == "Scientific outreach") %>%
+  pull("Details") 
+printNumberedList(outreach)
 ```
 \normalsize
 
@@ -166,28 +177,28 @@ Dagger (†) indicates presenter.
 **Oral presentations:**
 \scriptsize
 ```{r results='asis'}
-Talks %>%
-filter(Type == "Oral") %>%
-pull("Details") %>%
-printNumberedList()
+oral <- Talks %>%
+  filter(Type == "Oral") %>%
+  pull("Details") 
+printNumberedList(oral)
 ```
 \normalsize
 **Lightning talks:**
 \scriptsize
 ```{r results='asis'}
-Talks %>%
-filter(Type == "Lightning") %>%
-pull("Details") %>%
-printNumberedList()
+lightning <- Talks %>%
+  filter(Type == "Lightning") %>%
+  pull("Details") 
+printNumberedList(lightning)
 ```
 \normalsize
 **Posters:**
 \scriptsize
 ```{r results='asis'}
-Talks %>%
-filter(Type == "Poster") %>%
-pull("Details") %>%
-printNumberedList()
+poster <- Talks %>%
+  filter(Type == "Poster") %>%
+  pull("Details") 
+printNumberedList(poster)
 
 ```
 \normalsize
