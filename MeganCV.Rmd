@@ -272,7 +272,7 @@ printNumberedList(poster)
 
 # Grants, Fellowships & Awards
 
-**Research grants     (Total amount: $13,000)**
+**Research grants     (Total amount: $14,000)**
 \scriptsize
 ```{r}
 Awards %>%
