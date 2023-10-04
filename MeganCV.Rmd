@@ -217,6 +217,19 @@ printNumberedList(published)
 ```
 \normalsize
 
+**In review:** 
+
+\scriptsize 
+Manucripts available upon request. 
+
+```{r results='asis', cache=FALSE}
+inReview <- Publications %>%
+  filter(Type == "inReview") %>%
+  pull("Details") 
+printNumberedList(inReview)
+```
+\normalsize 
+
 <!-- **In press:** -->
 <!-- \scriptsize -->
 ```{r results='asis', cache=FALSE}
@@ -227,15 +240,7 @@ printNumberedList(published)
 ```
 <!-- \normalsize -->
 
-<!-- **Scientific outreach:** -->
-<!-- \scriptsize -->
-```{r results='asis', cache=FALSE}
-#outreach <- Publications %>%
-  #filter(Type == "Scientific outreach") %>%
-  #pull("Details") 
-#printNumberedList(outreach)
-```
-<!-- \normalsize -->
+
 
 # Talks
 \footnotesize 
