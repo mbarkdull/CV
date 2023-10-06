@@ -230,6 +230,19 @@ printNumberedList(inReview)
 ```
 \normalsize 
 
+**Submitted for presubmission inquiry:** 
+
+\scriptsize 
+Manucripts available upon request. 
+
+```{r results='asis', cache=FALSE}
+presubmission <- Publications %>%
+  filter(Type == "presubmission") %>%
+  pull("Details") 
+printNumberedList(presubmission)
+```
+\normalsize 
+
 <!-- **In press:** -->
 <!-- \scriptsize -->
 ```{r results='asis', cache=FALSE}
@@ -245,8 +258,17 @@ printNumberedList(inReview)
 # Talks
 \footnotesize 
 Dagger (†) indicates presenter. 
-\normalsize
 
+\normalsize
+**Invited seminars:**
+\scriptsize
+```{r results='asis'}
+invited <- Talks %>%
+  filter(Type == "invited") %>%
+  pull("Details") 
+printNumberedList(invited)
+```
+\normalsize
 **Oral presentations:**
 \scriptsize
 ```{r results='asis'}
@@ -256,7 +278,7 @@ oral <- Talks %>%
 printNumberedList(oral)
 ```
 \normalsize
-**Lightning talks:**
+<!-- **Lightning talks:**
 \scriptsize
 ```{r results='asis'}
 lightning <- Talks %>%
@@ -264,7 +286,7 @@ lightning <- Talks %>%
   pull("Details") 
 printNumberedList(lightning)
 ```
-\normalsize
+\normalsize -->
 **Posters:**
 \scriptsize
 ```{r results='asis'}
@@ -396,6 +418,8 @@ catList()
 
 ```
 \normalsize
+
+\textcolor{white}{test}
 
 # Outreach 
 ```{r}
