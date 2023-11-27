@@ -217,7 +217,7 @@ printNumberedList(published)
 ```
 \normalsize
 
-**Accepted abstract:** 
+**Submitted:** 
 
 \scriptsize 
 Manucripts available upon request. 
