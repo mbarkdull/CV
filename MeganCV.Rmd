@@ -217,7 +217,7 @@ printNumberedList(published)
 ```
 \normalsize
 
-**Submitted:** 
+**In review:** 
 
 \scriptsize 
 Manucripts available upon request. 
@@ -300,7 +300,7 @@ printNumberedList(poster)
 
 # Grants, Fellowships & Awards
 
-**Research grants     (Total amount: $14,000)**
+**Research grants     (Total amount: $17,500)**
 \scriptsize
 ```{r}
 Awards %>%
