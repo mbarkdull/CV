@@ -217,31 +217,19 @@ printNumberedList(published)
 ```
 \normalsize
 
-**In review:** 
+**In revision:** 
 
 \scriptsize 
 Manucripts available upon request. 
 
 ```{r results='asis', cache=FALSE}
 inReview <- Publications %>%
-  filter(Type == "inReview") %>%
+  filter(Type == "inRevision") %>%
   pull("Details") 
 printNumberedList(inReview)
 ```
 \normalsize 
 
-**Submitted for presubmission inquiry:** 
-
-\scriptsize 
-Manucripts available upon request. 
-
-```{r results='asis', cache=FALSE}
-presubmission <- Publications %>%
-  filter(Type == "presubmission") %>%
-  pull("Details") 
-printNumberedList(presubmission)
-```
-\normalsize 
 
 <!-- **In press:** -->
 <!-- \scriptsize -->
