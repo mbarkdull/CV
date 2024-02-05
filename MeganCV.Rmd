@@ -203,6 +203,7 @@ detailed_entries(Education,
 # Publications
 \footnotesize 
 Double dagger (‡) indicates co-first authors. 
+Dagger (†) indicates mentored undergraduate co-author. 
 \normalsize
 
 **Published:**
@@ -231,60 +232,18 @@ printNumberedList(inReview)
 \normalsize 
 
 
-<!-- **In press:** -->
-<!-- \scriptsize -->
+**Submitted:**
+
+\scriptsize
+Manucripts available upon request. 
+
 ```{r results='asis', cache=FALSE}
-#inPress <- Publications %>%
-  #filter(Type == "inPress") %>%
-  #pull("Details") 
-#printNumberedList(inPress)
-```
-<!-- \normalsize -->
-
-
-
-# Talks
-\footnotesize 
-Dagger (†) indicates presenter. 
-
-\normalsize
-**Invited seminars:**
-\scriptsize
-```{r results='asis'}
-invited <- Talks %>%
-  filter(Type == "invited") %>%
+inPrep <- Publications %>%
+  filter(Type == "Submitted") %>%
   pull("Details") 
-printNumberedList(invited)
+printNumberedList(inPrep)
 ```
-\normalsize
-**Oral presentations:**
-\scriptsize
-```{r results='asis'}
-oral <- Talks %>%
-  filter(Type == "Oral") %>%
-  pull("Details") 
-printNumberedList(oral)
-```
-\normalsize
-<!-- **Lightning talks:**
-\scriptsize
-```{r results='asis'}
-lightning <- Talks %>%
-  filter(Type == "Lightning") %>%
-  pull("Details") 
-printNumberedList(lightning)
-```
-\normalsize -->
-**Posters:**
-\scriptsize
-```{r results='asis'}
-poster <- Talks %>%
-  filter(Type == "Poster") %>%
-  pull("Details") 
-printNumberedList(poster)
-
-```
-\normalsize
+\normalsize 
 
 # Grants, Fellowships & Awards
 
@@ -328,6 +287,49 @@ Awards %>%
 filter(Type == "Award") %>%
 pull("Details") %>%
 catList()
+
+```
+\normalsize
+
+# Talks
+\footnotesize 
+Dagger (†) indicates presenter. 
+
+\normalsize
+**Invited seminars:**
+\scriptsize
+```{r results='asis'}
+invited <- Talks %>%
+  filter(Type == "invited") %>%
+  pull("Details") 
+printNumberedList(invited)
+```
+\normalsize
+**Oral presentations:**
+\scriptsize
+```{r results='asis'}
+oral <- Talks %>%
+  filter(Type == "Oral") %>%
+  pull("Details") 
+printNumberedList(oral)
+```
+\normalsize
+<!-- **Lightning talks:**
+\scriptsize
+```{r results='asis'}
+lightning <- Talks %>%
+  filter(Type == "Lightning") %>%
+  pull("Details") 
+printNumberedList(lightning)
+```
+\normalsize -->
+**Posters:**
+\scriptsize
+```{r results='asis'}
+poster <- Talks %>%
+  filter(Type == "Poster") %>%
+  pull("Details") 
+printNumberedList(poster)
 
 ```
 \normalsize
