@@ -269,7 +269,7 @@ catList()
 ```
 \normalsize
 
-**Fellowships     (Total amount: $233,655)**
+**Fellowships     (Total amount: $244,487)**
 \scriptsize
 ```{r}
 Awards %>%
@@ -408,8 +408,6 @@ catList()
 
 ```
 \normalsize
-
-\textcolor{white}{test}
 
 # Outreach 
 ```{r}
