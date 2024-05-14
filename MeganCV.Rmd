@@ -231,20 +231,6 @@ printNumberedList(inReview)
 ```
 \normalsize 
 
-
-**Submitted:**
-
-\scriptsize
-Manucripts available upon request. 
-
-```{r results='asis', cache=FALSE}
-inPrep <- Publications %>%
-  filter(Type == "Submitted") %>%
-  pull("Details") 
-printNumberedList(inPrep)
-```
-\normalsize 
-
 # Grants, Fellowships & Awards
 
 **Research grants     (Total amount: $17,500)**
