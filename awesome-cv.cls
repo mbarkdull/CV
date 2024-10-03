@@ -10,6 +10,7 @@
 %
 % Modified by:
 % Megan Barkdull
+% I edited line 628 to change column widths based on a stackoverflow answer by Simon Dispa (https://tex.stackexchange.com/questions/661426/location-parameter-in-awesome-cv-is-too-short)
 %
 % Notes:
 % 1) This class file defines the structure and layout of the template file (cv.tex, resume.tex).
@@ -624,7 +625,7 @@
 %  \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}%
   \setlength{\extrarowheight}{0pt}%
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{0.6\textwidth} R{0.4\textwidth}}
     \ifempty{#2#3}{\entrypositionstyle{#1} & \entrydatestyle{#4} \\}%
       {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\%
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}%

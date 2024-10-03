@@ -1,6 +1,6 @@
 ---
 surname: Megan Barkdull
-position: "Ph.D Candidate, NSF Graduate Research Fellow"
+position: "NSF Graduate Research Fellow"
 address: "Department of Ecology and Evolutionary Biology, Cornell University"
 profilepic: "ant.jpg"
 phone: "+1 407 492 6225"
@@ -175,6 +175,7 @@ printNumberedList <- function(x,
 CVData <- read_sheet("https://docs.google.com/spreadsheets/d/1EF4cO7h3tsKhbuJta43pKPsULGgUzWdK806L1hkwF-8/edit?usp=sharing")
 
 # Process data into sub-tibbles:
+professionalAppointments <- dplyr::filter(CVData, Category == "professionalAppointments")
 Education <- dplyr::filter(CVData, Category == "Education")
 Research <- dplyr::filter(CVData, Category == "Research Experience")
 Curation <- dplyr::filter(CVData, Category == "Curation")
@@ -193,6 +194,16 @@ Talks <- dplyr::filter(CVData, Category == "Talks")
 # Education 
 ```{r}
 detailed_entries(Education, 
+                 when = glue("{Start}--{End}"),
+                 what = Supervisor,
+                 where = Institution,
+                 with = Position,
+                 why = Details)
+```
+
+# Professional appointments
+```{r}
+detailed_entries(professionalAppointments, 
                  when = glue("{Start}--{End}"),
                  what = Supervisor,
                  where = Institution,
