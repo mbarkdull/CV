@@ -229,14 +229,13 @@ printNumberedList(published)
 ```
 \normalsize
 
-**In revision:** 
+**In press:** 
 
 \scriptsize 
-Manucripts available upon request. 
 
 ```{r results='asis', cache=FALSE}
 inReview <- Publications %>%
-  filter(Type == "inRevision") %>%
+  filter(Type == "inPress") %>%
   pull("Details") 
 printNumberedList(inReview)
 ```
