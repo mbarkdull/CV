@@ -231,8 +231,9 @@ printNumberedList(published)
 
 # Grants, Fellowships & Awards
 
-**Research grants     (Total amount: $17,500)**
+**Research grants**     
 \scriptsize
+**(Amount directly awarded: $96,240; Additional amount managed: $935,025)**
 ```{r}
 Awards %>%
 filter(Type == "researchGrant") %>%
@@ -242,8 +243,9 @@ catList()
 ```
 \normalsize
 
-**Conference travel grants     (Total amount: $1,250)**
+**Conference travel grants**     
 \scriptsize
+**(Total amount: $1,250)**
 ```{r}
 Awards %>%
 filter(Type == "conferenceGrant") %>%
@@ -253,8 +255,9 @@ catList()
 ```
 \normalsize
 
-**Fellowships     (Total amount: $244,487)**
+**Fellowships**     
 \scriptsize
+**(Total amount: $244,487)**
 ```{r}
 Awards %>%
 filter(Type == "Fellowship") %>%
