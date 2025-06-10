@@ -5,7 +5,7 @@ address: "Natural History Museum of Los Angeles County"
 profilepic: "ant.jpg"
 phone: "+1 407 492 6225"
 www: mbarkdull.github.io
-email: "mb2337@cornell.edu "
+email: "mbarkdull@nhm.org "
 twitter: meganbarkdull_
 github: mbarkdull
 headcolor: 70415c
