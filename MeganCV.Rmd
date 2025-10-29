@@ -172,7 +172,7 @@ printNumberedList <- function(x,
 }
 
 # Read in data:
-CVData <- read_sheet("https://docs.google.com/spreadsheets/d/1EF4cO7h3tsKhbuJta43pKPsULGgUzWdK806L1hkwF-8/edit?usp=sharing")
+CVData <- read_sheet("https://docs.google.com/spreadsheets/d/1nennIiV947Zv4v8-yzd0Op_ZMoJ1TThwRPIGr67bLv8/edit?usp=sharing")
 
 # Process data into sub-tibbles:
 professionalAppointments <- dplyr::filter(CVData, Category == "professionalAppointments")
@@ -223,6 +223,18 @@ Dagger (†) indicates mentored undergraduate co-author.
 
 published <- Publications %>%
   filter(Type == "Published") %>%
+  pull("Details") 
+printNumberedList(published)
+
+```
+\normalsize
+
+**In review:**
+\scriptsize
+```{r results='asis', cache=FALSE}
+
+published <- Publications %>%
+  filter(Type == "inReview") %>%
   pull("Details") 
 printNumberedList(published)
 
