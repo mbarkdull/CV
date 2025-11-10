@@ -229,12 +229,12 @@ printNumberedList(published)
 ```
 \normalsize
 
-**In review:**
+**Accepted:**
 \scriptsize
 ```{r results='asis', cache=FALSE}
 
 published <- Publications %>%
-  filter(Type == "inReview") %>%
+  filter(Type == "Accepted") %>%
   pull("Details") 
 printNumberedList(published)
 
