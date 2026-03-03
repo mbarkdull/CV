@@ -213,8 +213,9 @@ detailed_entries(Education,
 
 # Publications
 \footnotesize 
+Section sign (§) indicates co-senior or co-last authors.
 Double dagger (‡) indicates co-first authors. 
-Dagger (†) indicates mentored undergraduate co-author. 
+Dagger (†) indicates a mentored undergraduate co-author. 
 \normalsize
 
 **Published:**
@@ -235,6 +236,18 @@ printNumberedList(published)
 
 published <- Publications %>%
   filter(Type == "revision") %>%
+  pull("Details") 
+printNumberedList(published)
+
+```
+\normalsize
+
+**Submitted:**
+\scriptsize
+```{r results='asis', cache=FALSE}
+
+published <- Publications %>%
+  filter(Type == "submitted") %>%
   pull("Details") 
 printNumberedList(published)
 
