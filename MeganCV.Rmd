@@ -376,7 +376,7 @@ detailed_entries(Teaching,
                  why = Details)
 ```
 
-# Mentoring Experiences
+# Mentoring 
 
 ```{r}
 detailed_entries(Mentoring, 
