@@ -242,7 +242,7 @@ printNumberedList(published)
 ```
 \normalsize
 
-**Submitted:**
+**In review:**
 \scriptsize
 ```{r results='asis', cache=FALSE}
 
