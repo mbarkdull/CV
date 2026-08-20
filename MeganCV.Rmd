@@ -254,18 +254,6 @@ printNumberedList(published)
 ```
 \normalsize
 
-**In review:**
-\scriptsize
-```{r results='asis', cache=FALSE}
-
-published <- Publications %>%
-  filter(Type == "submitted") %>%
-  pull("Details") 
-printNumberedList(published)
-
-```
-\normalsize
-
 # Grants, Fellowships & Awards
 
 **Research grants**     
