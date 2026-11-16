@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.3)  5 NOV 2026 08:13
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.3)  16 NOV 2026 12:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -168,7 +168,9 @@ Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
 \l__fontspec_tmpc_dim=\dimen164
 (/Users/mbarkdull/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-) (/Users/mbarkdull/Library/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/Users/mbarkdull/Library/TinyTeX/texmf-dist/tex/latex/unicode-math/unicode-math.sty
+) (/Users/mbarkdull/Library/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/Users/mbarkdull/Library/TinyTeX/texmf-dist/tex/latex/l3packages/xfp/xfp.sty
+Package: xfp 2025-10-09 L3 Floating point unit
+) (/Users/mbarkdull/Library/TinyTeX/texmf-dist/tex/latex/unicode-math/unicode-math.sty
 Package: unicode-math 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLaTeX
 (/Users/mbarkdull/Library/TinyTeX/texmf-dist/tex/latex/unicode-math/unicode-math-xetex.sty
 Package: unicode-math-xetex 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLaTeX
@@ -1010,7 +1012,7 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 172.
 LaTeX Font Info:    Font shape `TU/SourceSans3(0)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 205.
+(Font)              scaled to size 8.0pt on input line 207.
 [1
 
 ] [2] [3] [4] [5] [6]
@@ -1025,10 +1027,10 @@ Package rerunfilecheck Info: File `MeganCV.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 33496 strings out of 470191
- 686353 string characters out of 5477686
- 1279059 words of memory out of 5000000
- 61511 multiletter control sequences out of 15000+600000
+ 33516 strings out of 470191
+ 686900 string characters out of 5477686
+ 1280338 words of memory out of 5000000
+ 61527 multiletter control sequences out of 15000+600000
  633422 words of font info for 147 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  131i,11n,136p,545b,771s stack positions out of 10000i,1000n,20000p,200000b,200000s
